@@ -279,11 +279,12 @@ export default function DashboardPage() {
                     </span>
                   </div>
                 </div>
-                <Progress
-                  value={task.progress}
-                  className="h-1 bg-white/20"
-                  indicatorClassName="bg-white"
-                />
+                <div className="h-1 w-full rounded-full bg-white/20">
+                  <div
+                    className="h-1 rounded-full bg-white transition-all"
+                    style={{ width: `${task.progress}%` }}
+                  />
+                </div>
               </div>
             ))}
           </div>
